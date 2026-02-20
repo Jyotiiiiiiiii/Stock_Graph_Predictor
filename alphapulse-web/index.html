@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlphaPulse | Advanced Stock Intelligence</title>
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <header class="navbar">
+      <div class="container">
+        <div class="logo">AlphaPulse</div>
+        <nav>
+          <a href="#strategy">Strategy</a>
+          <a href="#prediction">Prediction</a>
+          <a href="#tech">Technology</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <span class="eyebrow">Financial Technology Excellence</span>
+            <h1>Precision in Every <span class="accent">Market Signal</span></h1>
+            <p>Harnessing machine learning and quantitative strategies to decode market movements with clarity and
+              confidence.</p>
+            <div class="cta-group">
+              <a href="#prediction" class="btn btn-primary">Try Predictor</a>
+              <a href="#strategy" class="btn btn-secondary">Explore Strategy</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="strategy" class="section">
+        <div class="container grid">
+          <div class="section-image">
+            <div class="placeholder-graphic dark">
+              <div class="bar-motif">
+                <div style="height: 40%"></div>
+                <div style="height: 60%"></div>
+                <div style="height: 45%"></div>
+                <div style="height: 80%"></div>
+                <div style="height: 55%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="section-text">
+            <h2>Quantitative Backtesting</h2>
+            <p>Our Moving Average Crossover engine simulates years of market data in seconds, providing rigorous
+              validation of trading strategies before capital is at risk.</p>
+            <ul class="feature-list">
+              <li>Performance metrics (Sharpe, Sortino, Drawdown)</li>
+              <li>Strategy comparison against benchmarks</li>
+              <li>Automated report generation</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="prediction" class="section inverse">
+        <div class="container">
+          <div class="prediction-header text-center">
+            <h2>Live Prediction Engine</h2>
+            <p>Enter a ticker symbol below to generate an AI-powered forecast for the next trading session.</p>
+          </div>
+
+          <div class="prediction-container">
+            <form id="prediction-form" class="prediction-form">
+              <input type="text" id="ticker-input" placeholder="e.g. NVDA, AAPL, BTC-USD" required />
+              <button type="submit" class="btn btn-primary" id="predict-btn">Generate Forcast</button>
+            </form>
+
+            <div id="prediction-result" class="prediction-result hidden">
+              <div class="result-card">
+                <div class="result-header">
+                  <span id="res-ticker" class="res-ticker">---</span>
+                  <span id="res-price" class="res-price">$0.00</span>
+                </div>
+                <div class="result-body">
+                  <div class="prediction-badge" id="res-direction">--</div>
+                  <div class="chart-container">
+                    <canvas id="prediction-chart"></canvas>
+                  </div>
+                  <div class="metrics-grid">
+                    <div class="metric">
+                      <span class="label">Confidence</span>
+                      <span id="res-conf" class="value">0%</span>
+                    </div>
+                    <div class="metric">
+                      <span class="label">Historical Accuracy</span>
+                      <span id="res-accuracy" class="value">0%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="loader" class="loader hidden">
+              <div class="spinner"></div>
+              <p>Analyzing market patterns...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tech" class="section">
+        <div class="container text-center">
+          <h2>Built on a Scientific Foundation</h2>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>Scikit-Learn</span>
+            <span>Pandas</span>
+            <span>Yahoo Finance</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 AlphaPulse. All rights reserved. For educational and research purposes only.</p>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
