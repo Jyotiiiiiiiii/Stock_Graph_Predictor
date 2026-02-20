@@ -48,7 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
         loader?.classList.remove('hidden');
 
         try {
-            const response = await fetch(`http://localhost:8000/predict/${ticker}`);
+            const response = await fetch(
+    `https://stock-graph-predictor.onrender.com/predict/${ticker}`
+);
             if (!response.ok) throw new Error('Prediction failed');
 
             const data = await response.json();
